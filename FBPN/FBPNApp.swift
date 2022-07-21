@@ -11,7 +11,8 @@ import SwiftUI
 struct FBPNApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Main()
+                .preferredColorScheme(.dark)
         }
     }
 }
