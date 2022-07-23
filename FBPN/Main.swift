@@ -6,35 +6,60 @@
 //
 
 import SwiftUI
-import Firebase
-import UserNotifications 
 
 struct Main: View {
-    @State var usrInput =  (String: "", title: "")
-    @State var placeHolder: String = "Write something here..."
+    
+    @Binding var announcements: [Announcement]
+    @State var sheetPresented = false
+    
+    
     
     var body: some View {
         NavigationView {
-            Form {
-                Section(header: Text("Message")) {
-                    TextEditor(text: $usrInput.title)
-                       
-                    }
-                
-                Section {
-                    Button("Publish") {
-                        print("\(usrInput)")
-                    }
-                    .accentColor(Color(CC.Firery))
+            List {
+                ForEach(announcements) { announcement in
+                    let announcementIndex = announcements.firstIndex(of: announcement)!
                     
-                    
+                    NavigationLink(destination: AnnoucementDetailView(annoucement: $announcements[announcementIndex])) {
+                        Image(systemName: announcement.icon)
+                        
+                        HStack() {
+                            Text(announcement.icon)
+                                .foregroundColor(Color(CC.Firery))
+                                .bold()
+                            Text(announcement.title)
+                                .font(.system(size: 22))
+                                .bold()
+                                
+                            
+                            ForEach(announcement.tag, id: \.rawValue) { type in
+                                Image(systemName: type.getSymbolName())
+                            }
+                        }
+                        
+                    }
                 }
+                // edit & delete
+                //                    .onDelete { offsets in
+                //                        announcements.remove(atOffsets: offsets)
+                //                    }.onMove { source, destination in
+                //                        announcements.move(fromOffsets: source, toOffset: destination)
+                //                    }
             }
-            
-            .navigationTitle("New Annoucement")
+            .navigationTitle("Announcements")
+            .navigationBarItems(trailing: Button(action: {
+                sheetPresented = true
+            }, label: {
+                Image(systemName: "plus")
+                    .foregroundColor(Color(CC.Firery))
+            }))
+        }.sheet(isPresented: $sheetPresented) {
+            NewAnnoucementView_(announcements: announcements)
         }
     }
 }
+
+
 
 
 
@@ -42,10 +67,5 @@ struct CC {
     static let DarkGray = "DarkGray"
     static let Firery = "Firery"
 }
-struct Main_Previews: PreviewProvider {
-    static var previews: some View {
-        Main()
-            .preferredColorScheme(.dark)
-        
-    }
-}
+
+

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F402C615288A6ED2002C7FB2 /* NewAnnoucementView .swift in Sources */ = {isa = PBXBuildFile; fileRef = F402C614288A6ED2002C7FB2 /* NewAnnoucementView .swift */; };
+		F402C617288A7ACA002C7FB2 /* AnnoucementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402C616288A7ACA002C7FB2 /* AnnoucementDetailView.swift */; };
+		F402C61B288AA58C002C7FB2 /* AnnouncementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402C61A288AA58C002C7FB2 /* AnnouncementData.swift */; };
 		F45F5E102889706F00700C65 /* FBPNApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45F5E0F2889706F00700C65 /* FBPNApp.swift */; };
 		F45F5E142889707000700C65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45F5E132889707000700C65 /* Assets.xcassets */; };
 		F45F5E172889707000700C65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45F5E162889707000700C65 /* Preview Assets.xcassets */; };
@@ -16,6 +19,7 @@
 		F45F5E3B2889778200700C65 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F45F5E3A2889778200700C65 /* FirebaseAnalytics */; };
 		F45F5E3D2889778200700C65 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = F45F5E3C2889778200700C65 /* FirebaseMessaging */; };
 		F45F5E3F28897C1600700C65 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45F5E3E28897C1600700C65 /* Main.swift */; };
+		F4934C71288BE86100C3FAEE /* halfSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4934C70288BE86100C3FAEE /* halfSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F402C614288A6ED2002C7FB2 /* NewAnnoucementView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewAnnoucementView .swift"; sourceTree = "<group>"; };
+		F402C616288A7ACA002C7FB2 /* AnnoucementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnoucementDetailView.swift; sourceTree = "<group>"; };
+		F402C61A288AA58C002C7FB2 /* AnnouncementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementData.swift; sourceTree = "<group>"; };
 		F45F5E0C2889706F00700C65 /* FBPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45F5E0F2889706F00700C65 /* FBPNApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPNApp.swift; sourceTree = "<group>"; };
 		F45F5E132889707000700C65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +53,7 @@
 		F45F5E2A2889707000700C65 /* FBPNUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPNUITests.swift; sourceTree = "<group>"; };
 		F45F5E2C2889707000700C65 /* FBPNUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBPNUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F45F5E3E28897C1600700C65 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		F4934C70288BE86100C3FAEE /* halfSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = halfSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				F45F5E0F2889706F00700C65 /* FBPNApp.swift */,
+				F402C61A288AA58C002C7FB2 /* AnnouncementData.swift */,
 				F45F5E3E28897C1600700C65 /* Main.swift */,
+				F402C614288A6ED2002C7FB2 /* NewAnnoucementView .swift */,
+				F402C616288A7ACA002C7FB2 /* AnnoucementDetailView.swift */,
+				F4934C70288BE86100C3FAEE /* halfSheet.swift */,
 				F45F5E132889707000700C65 /* Assets.xcassets */,
 				F45F5E152889707000700C65 /* Preview Content */,
 			);
@@ -268,7 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F402C61B288AA58C002C7FB2 /* AnnouncementData.swift in Sources */,
 				F45F5E3F28897C1600700C65 /* Main.swift in Sources */,
+				F402C617288A7ACA002C7FB2 /* AnnoucementDetailView.swift in Sources */,
+				F402C615288A6ED2002C7FB2 /* NewAnnoucementView .swift in Sources */,
+				F4934C71288BE86100C3FAEE /* halfSheet.swift in Sources */,
 				F45F5E102889706F00700C65 /* FBPNApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
